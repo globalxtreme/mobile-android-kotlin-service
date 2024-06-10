@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.activity.LoginActivity"
+    android:id="@+id/mainView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/formView">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/ic_logo"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gxSalesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/gxLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GX"
+                android:textSize="20sp"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/salesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sales"
+                android:textSize="20sp"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@id/gxLabel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/commitedLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Commited to better quality"
+            android:textSize="11sp"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/gxSalesLabel"
+            android:layout_marginTop="5dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/formView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="Email"
+            android:textSize="13sp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/emailTxt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/emailLabel"
+            android:paddingLeft="45dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/edit_text_round_corner"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:hint="type your email"
+            android:inputType="textEmailAddress"
+            android:nextFocusDown="@+id/passwordTxt"/>
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_email"
+            app:layout_constraintTop_toTopOf="@id/emailTxt"
+            app:layout_constraintBottom_toBottomOf="@id/emailTxt"
+            app:layout_constraintLeft_toLeftOf="@id/emailTxt"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="Password"
+            android:textSize="13sp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/emailTxt"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:id="@+id/passwordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingLeft="45dp"
+            android:paddingRight="60dp"
+            android:background="@drawable/edit_text_round_corner"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:hint="type your password"
+            android:inputType="textPassword"
+            android:imeOptions="actionGo"/>
+
+        <ImageView
+            android:id="@+id/showPasswordButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_show"
+            android:padding="10dp"
+            app:layout_constraintRight_toRightOf="@id/passwordTxt"
+            app:layout_constraintTop_toTopOf="@id/passwordTxt"
+            app:layout_constraintBottom_toBottomOf="@id/passwordTxt"
+            android:layout_marginRight="10dp"
+            android:onClick="showHidePassword"/>
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_password"
+            app:layout_constraintTop_toTopOf="@id/passwordTxt"
+            app:layout_constraintBottom_toBottomOf="@id/passwordTxt"
+            app:layout_constraintLeft_toLeftOf="@id/passwordTxt"
+            android:layout_marginLeft="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signInButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/card_view"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/formView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/signInLabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Sign In"
+            android:textSize="13sp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/signInImage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/ic_sign_in"
+            android:layout_marginRight="12dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:id="@+id/postLoadingIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:visibility="invisible"
+        app:mk_type="LineSpinner"
+        app:mk_color="@color/black"
+        app:layout_constraintTop_toTopOf="@id/signInButton"
+        app:layout_constraintBottom_toBottomOf="@id/signInButton"
+        app:layout_constraintLeft_toLeftOf="@id/signInButton"
+        app:layout_constraintRight_toRightOf="@id/signInButton"/>
+
+    <TextView
+        android:id="@+id/versionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:text="GlobalXtreme © 2023 - v3.0.0"
+        android:textSize="12sp"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="@color/lightDefaultAndroid"
+        android:textAlignment="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

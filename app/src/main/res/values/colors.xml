@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f9c900</color>
+    <color name="colorPrimaryPurple">#627af4</color>
+    <color name="colorPrimaryDark">#FAFAFA</color>
+    <!--    <color name="colorAccent">#03DAC5</color>-->
+    <color name="colorAccent">#f9c900</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="defaultAndroid">#808080</color>
+    <color name="lightDefaultAndroid">#9A9A9A</color>
+    <color name="strip">#ededed</color>
+    <color name="lightStrip">#F8F8F8</color>
+
+    <!--    Status-->
+    <color name="green">#00c226</color>
+    <color name="orange">#fc9300</color>
+    <color name="red">#ff4a54</color>
+    <color name="redBox">#feeae9</color>
+    <color name="orangeBox">#fff2e2</color>
+    <color name="greenBox">#e0f9e2</color>
+    <color name="primaryBox">#7884F5</color>
+</resources>
